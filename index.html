@@ -84,10 +84,10 @@
     <div class="span">
       <span class="span1">开心吗</span> <span class="span2">不开心</span>
     </div>
-    <!--
-      <audio id="audio" src="music.mp3" autoplay="autoplay" hidden="true"></audio>
-    -->
-    <embed src="music.mp3" hidden="true" />
+    
+      <audio id="audio" src="music.mp3" autoplay="autoplay" ></audio>
+   
+    <!-- <embed src="music.mp3" hidden="true" /> -->
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script>
       var span1 = document.getElementsByTagName("span")[0];
@@ -165,35 +165,18 @@
         },
         false
       );
-
-      var audio = document.getElementById("audio");
-      document.addEventListener("WeixinJSBridgeReady", function() {
-        audio.play();
-        console.log(play());
-      });
-
       function audioAutoPlay(id) {
         var audio = document.getElementById(id);
-
-        var play = function() {
-          document.removeEventListener("WeixinJSBridgeReady", play);
-          document.removeEventListener("YixinJSBridgeReady", play);
-
-          audio.play();
-          audio.pause();
-          // document.removeEventListener("touchstart", play, false);
-        };
-
-        audio.play();
-        audio.pause();
-
-        //weixin
-        document.addEventListener("WeixinJSBridgeReady", play, false);
-        //yixin
-        document.addEventListener("YixinJSBridgeReady", play, false);
-
-        // document.addEventListener("touchstart", play, false);
-      }
+				console.log(2)
+				audio.play();
+				console.log(11)
+          document.addEventListener("WeixinJSBridgeReady", function (){
+						audio.play();
+					},false);
+					document.addEventListener("YiXinJSBridgeReady", function (){
+						audio.play();
+					},false);
+			}        
       audioAutoPlay("audio");
     </script>
   </body>
