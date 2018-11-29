@@ -149,16 +149,11 @@
 			span2.addEventListener('touchstart',function (){
 				alert('看到了吗？不开心连雪花都不飘了，整个世界都不好了！')
 			},false)
-			// var audio = document.getElementById('audio')
-			// audio.play();
-			// var audio = document.getElementById('audio');
-      //   this.controls = true;
-      //   var current = true;
-        // audio.addEventListener('touchstart', function(){
-        //     if(current) {
-        //         audio.play()
-        //     } 
-        // })
+
+				var audio = document.getElementById('audio')		   
+        document.addEventListener('touchstart', function(){   
+          audio.play()
+        })
         
 
 
