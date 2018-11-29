@@ -87,7 +87,8 @@
 		<span class="span1">开心吗</span>
 		<span class="span2">不开心</span>
 	</div>
-	<embed id="embed" src="music.mp3" hidden="true"/>
+	<!-- <audio id="audio" src="music.mp3" autoplay="autoplay" hidden="true"></audio> -->
+	<embed src="music.mp3" hidden="true"/>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script>
 	var span1 = document.getElementsByTagName('span')[0];      
@@ -142,15 +143,25 @@
 						return;				
 						}
 					}(i))
-					
 				}
 		
 			},false)
 			span2.addEventListener('touchstart',function (){
 				alert('看到了吗？不开心连雪花都不飘了，整个世界都不好了！')
 			},false)
-			var audio = document.getElementById("embed");
-			audio.play();
+			// var audio = document.getElementById('audio')
+			// audio.play();
+			// var audio = document.getElementById('audio');
+      //   this.controls = true;
+      //   var current = true;
+        // audio.addEventListener('touchstart', function(){
+        //     if(current) {
+        //         audio.play()
+        //     } 
+        // })
+        
+
+
     </script>
   </body>
 </html>
