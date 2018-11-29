@@ -165,19 +165,25 @@
         },
         false
       );
-      function audioAutoPlay(id) {
+				function audioAutoPlay(id) {
         var audio = document.getElementById(id);
-				console.log(2)
-				audio.play();
-				console.log(11)
+
+				// audio.play();
+		
           document.addEventListener("WeixinJSBridgeReady", function (){
 						audio.play();
 					},false);
 					document.addEventListener("YiXinJSBridgeReady", function (){
 						audio.play();
 					},false);
+					document.addEventListener("touchstart", function (){
+						audio.play();
+						// console.log(11)
+					},false);
 			}        
       audioAutoPlay("audio");
+			
+      
     </script>
   </body>
 </html>
